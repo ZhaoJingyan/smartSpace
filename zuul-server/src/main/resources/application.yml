@@ -1,0 +1,22 @@
+server:
+  port: 8001
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8000/eureka/
+spring:
+  application:
+    name: zuul-server
+  servlet:
+    multipart:
+      max-file-size: 512MB
+      max-request-size: 512MB
+zuul:
+  routes:
+    file-server:
+      path: /file/**
+      serviceId: file-server
+    front-end-page:
+      path: /**
+      serviceId: front-end
+  add-host-header: true

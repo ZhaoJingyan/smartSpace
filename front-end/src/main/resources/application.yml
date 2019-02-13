@@ -1,0 +1,18 @@
+server:
+  port: 8011
+spring:
+  application:
+    name: front-end
+  profiles:
+    active: env
+  mvc:
+    favicon:
+      enabled: false
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8000/eureka/
+
+front-end:
+  front-end-project-path: 'file:C:\Users\zhaoj\Documents\vuejs\my-vue\dist\'
